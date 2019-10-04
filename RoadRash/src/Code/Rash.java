@@ -15,8 +15,10 @@ import java.util.Random;
  * Created by Ishan on 9/11/2016.
  */
 public class Rash implements KeyListener {
-    public static JPanel panel;public static int ded=0,x0,x1,x2,x3,x4,herox,heroy;
-   static Graphics graphics,graphics1;public static Image dead=null,rail=null;
+    public static JPanel panel;
+    public static int ded=0,x0,x1,x2,x3,x4,herox,heroy;
+    static Graphics graphics,graphics1;
+    public static Image dead=null,rail=null;
 
 
 
@@ -79,7 +81,7 @@ public class Rash implements KeyListener {
 
         try {
             bg1=ImageIO.read(Rash.class.getResource("../images/73933.jpg"));
-           bg2=ImageIO.read(Rash.class.getResource("../images/73933_20160911154803859_20160911155318472.jpg"));
+            bg2=ImageIO.read(Rash.class.getResource("../images/73933_20160911154803859_20160911155318472.jpg"));
             dash=ImageIO.read(Rash.class.getResource("../images/1473537068236.png"));
 
 
@@ -129,9 +131,8 @@ public class Rash implements KeyListener {
         panel.addKeyListener(new Rash());
 
 
-        while(true) {p++;
-
-
+        while(true) {
+            p++;
             try {
                 Thread.sleep(150);
             } catch (InterruptedException e) {
@@ -163,7 +164,9 @@ public class Rash implements KeyListener {
             thuk=x3;}
         if(p==4)
         {
-            x0=A[1][rand0];y0=365;i0=1;
+            x0=A[1][rand0];
+            y0=365;
+            i0=1;
 
             x1 = A[2][rand1];
             y1 = 400;
@@ -177,19 +180,20 @@ public class Rash implements KeyListener {
             y3 = 500;
             i3 = 4;
 
-            do{
+            do {
                 random = new Random();
                 rand4 = random.nextInt(5);
-            }while(rand4==(rand0-1)||rand4==(rand0+1)||rand4==rand0);
+            } while(rand4==(rand0-1)||rand4==(rand0+1)||rand4==rand0);
             x4 = A[0][rand4];
             y4 = 340;
             i4 = 0;
             thuk=x2;
         }
 
-        if(p==6)
-        {
-            x0=A[2][rand0];y0=400;i0=2;
+        if(p==6) {
+            x0=A[2][rand0];
+            y0=400;
+            i0=2;
 
             x1 = A[3][rand1];
             y1 = 445;
@@ -202,7 +206,7 @@ public class Rash implements KeyListener {
             do{
                 random = new Random();
                 rand3 = random.nextInt(5);
-            }while(rand3==(rand4-1)||rand3==(rand4+1)||rand3==rand4);
+            } while(rand3==(rand4-1)||rand3==(rand4+1)||rand3==rand4);
             x3 = A[0][rand3];
             y3= 340;
             i3 = 0;
@@ -212,20 +216,19 @@ public class Rash implements KeyListener {
             i4 = 1;
             thuk=x1;
         }
-
-        if(p==8)
-        {
-            x0=A[3][rand0];y0=445;i0=3;
+        if(p==8) {
+            x0=A[3][rand0]; 
+            y0=445;
+            i0=3;
 
             x1 = A[4][rand1];
             y1 = 500;
-            i1 = 4;
-
-
+            i1 = 4
             do{
                 random = new Random();
                 rand2 = random.nextInt(5);
             }while(rand2==(rand3-1)||rand2==(rand3+1)||rand2==rand3);
+            
             x2 = A[0][rand2];
             y2 = 340;
             i2 = 0;
@@ -240,10 +243,11 @@ public class Rash implements KeyListener {
             thuk=x0;
         }
 
-        if(p==10)
-        {
+        if(p==10) {
             p=1;
-            x0=A[4][rand0];y0=500;i0=4;
+            x0=A[4][rand0];
+            y0=500;
+            i0=4;
 
             do{
                 random = new Random();
@@ -285,7 +289,8 @@ public class Rash implements KeyListener {
                 Thread.sleep(150);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }graphics=mainImage.getGraphics();
+            }
+            graphics=mainImage.getGraphics();
             graphics1=panel.getGraphics();
             graphics.clearRect(0,0,1300,700);
             graphics.drawImage(bg2,0,0,null);
@@ -297,12 +302,15 @@ public class Rash implements KeyListener {
             graphics.drawImage(hero,herox,heroy,null);
             graphics.drawImage(dash,237,535,null);graphics.dispose();
             if(ded==1)
-            {graphics1.drawImage(rail,0,0,null);
+            {
+                graphics1.drawImage(rail,0,0,null);
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }System.exit(0);}
+                }
+                System.exit(0);
+            }
             if(herox==thuk)
             {
                 graphics1.drawImage(dead,0,0,null);
@@ -320,34 +328,52 @@ public class Rash implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-
+        // Intentionally blank
     }
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == 37) {int h=0;
+        if (e.getKeyCode() == 37) {
+            int h=0;
             if (herox == 770&&h==0)
-            {herox = 640;h=1;}
+            {
+                herox = 640;h=1;
+            }
             if (herox == 640&&h==0)
-            {herox = 510;h=1;}
+            {
+                herox = 510;h=1;
+            }
             if (herox == 510&&h==0)
-            {herox = 370;h=1;}
+            {
+                herox = 370;h=1;
+            }
             if (herox == 910&&h==0)
-            {herox = 770;h=1;}
-            if (herox == 370&&h==0) {ded=1;
+            {
+                herox = 770;h=1;
+            }
+            if (herox == 370&&h==0) {
+                ded=1;
             }
         }
-        if (e.getKeyCode() == 39){int h=0;
+        if (e.getKeyCode() == 39){
+            int h=0;
             if (herox == 770&&h==0)
-            { herox = 910;h=1;}
+            { 
+                herox = 910;h=1;
+            }
             if (herox == 640&&h==0)
-            {herox = 770;h=1;}
+            {
+                herox = 770;h=1;
+            }
             if (herox == 510&&h==0)
-            {herox = 640;h=1;}
+            {
+                herox = 640;h=1;
+            }
             if (herox == 370&&h==0)
-            {herox = 510;h=1;}
+            {
+                herox = 510;h=1;
+            }
             if (herox == 910&&h==0) {
                 ded=1;
-
             }
         }
 
@@ -355,7 +381,7 @@ public class Rash implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-
+        // Intentionally blank
     }
     public static int pass(int a,int b,int c,int d)
     {
